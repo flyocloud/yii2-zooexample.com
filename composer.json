@@ -1,0 +1,29 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "flyo/nitrocms-yii2" : "dev-main",
+        "yiisoft/yii2": "2.0.47"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "^2.1.0"
+    },
+    "license": "MIT",
+    "scripts": {
+        "serve" : "php yii serve --port=8888"
+    },
+    "config": {
+        "fxp-asset": {
+            "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "luyadev/luya-composer": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
