@@ -5,9 +5,19 @@
 use Flyo\Yii\Widgets\NavWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\web\View;
 
 /** @var string $content */
+/** @var View $this */
 
+$this->registerJs(<<<'EOT'
+const parentWindow = window.parent || window.opener;
+window.addEventListener("message", (event) => {
+    if (event.data?.action === 'pageRefresh') {
+        window.location.reload(true);
+    }
+})
+EOT)
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
