@@ -9,7 +9,8 @@
     },
     "license": "MIT",
     "scripts": {
-        "serve" : "php yii serve --port=8888"
+        "serve" : "php yii serve --port=8888",
+        "kill" : "killall -9 php8.1"
     },
     "config": {
         "fxp-asset": {
