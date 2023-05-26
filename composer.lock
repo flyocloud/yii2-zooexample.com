@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6c352489c528894be69d9a56f9f483e",
+    "content-hash": "2d8912f478815f87a1d7e33e57486998",
     "packages": [
         {
             "name": "bower-asset/inputmask",
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -208,17 +208,17 @@
             "time": "2022-09-18T07:06:19+00:00"
         },
         {
-            "name": "flyo/nitrocms-php",
+            "name": "flyo/nitro-php",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/flyocloud/nitrocms-php-sdk.git",
-                "reference": "4b65e61ecb5c23dc7b052d9542721edc483653ce"
+                "url": "https://github.com/flyocloud/nitro-php-sdk.git",
+                "reference": "367dc410922cb0308cf851b679aa706777111c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flyocloud/nitrocms-php-sdk/zipball/4b65e61ecb5c23dc7b052d9542721edc483653ce",
-                "reference": "4b65e61ecb5c23dc7b052d9542721edc483653ce",
+                "url": "https://api.github.com/repos/flyocloud/nitro-php-sdk/zipball/367dc410922cb0308cf851b679aa706777111c09",
+                "reference": "367dc410922cb0308cf851b679aa706777111c09",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
             "license": [
                 "mit"
             ],
-            "description": "Flyo Nitro Headless CMS",
+            "description": "Flyo Nitro PHP SDK",
             "homepage": "https://dev.flyo.cloud",
             "keywords": [
                 "api",
@@ -256,27 +256,27 @@
                 "sdk"
             ],
             "support": {
-                "issues": "https://github.com/flyocloud/nitrocms-php-sdk/issues",
-                "source": "https://github.com/flyocloud/nitrocms-php-sdk/tree/main"
+                "issues": "https://github.com/flyocloud/nitro-php-sdk/issues",
+                "source": "https://github.com/flyocloud/nitro-php-sdk/tree/main"
             },
-            "time": "2023-05-13T11:09:51+00:00"
+            "time": "2023-05-26T14:23:27+00:00"
         },
         {
-            "name": "flyo/nitrocms-yii2",
+            "name": "flyo/nitro-yii2",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/flyocloud/nitrocms-yii2.git",
-                "reference": "658062f473bad9db56f4faa31e6fbc5093f086a6"
+                "url": "https://github.com/flyocloud/nitro-yii2.git",
+                "reference": "5c9ebeec21c2ccd0e674fcb4578405cd5fb84104"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flyocloud/nitrocms-yii2/zipball/658062f473bad9db56f4faa31e6fbc5093f086a6",
-                "reference": "658062f473bad9db56f4faa31e6fbc5093f086a6",
+                "url": "https://api.github.com/repos/flyocloud/nitro-yii2/zipball/5c9ebeec21c2ccd0e674fcb4578405cd5fb84104",
+                "reference": "5c9ebeec21c2ccd0e674fcb4578405cd5fb84104",
                 "shasum": ""
             },
             "require": {
-                "flyo/nitrocms-php": "dev-main",
+                "flyo/nitro-php": "dev-main",
                 "yiisoft/yii2": "^2.0"
             },
             "default-branch": true,
@@ -296,30 +296,30 @@
                     "email": "git@nadar.io"
                 }
             ],
-            "description": "Flyo Nitro Headless CMS",
+            "description": "Flyo Nitro Yii2 Framework Module",
             "support": {
-                "issues": "https://github.com/flyocloud/nitrocms-yii2/issues",
-                "source": "https://github.com/flyocloud/nitrocms-yii2/tree/main"
+                "issues": "https://github.com/flyocloud/nitro-yii2/issues",
+                "source": "https://github.com/flyocloud/nitro-yii2/tree/main"
             },
-            "time": "2023-03-03T13:50:02+00:00"
+            "time": "2023-05-26T14:29:13+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.5.x-dev",
+            "version": "7.7.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "255d7157b463ee2d9b3cbf891eda2691baa43076"
+                "reference": "fb7566caccf22d74d1ab270de3551f72a58399f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/255d7157b463ee2d9b3cbf891eda2691baa43076",
-                "reference": "255d7157b463ee2d9b3cbf891eda2691baa43076",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/fb7566caccf22d74d1ab270de3551f72a58399f5",
+                "reference": "fb7566caccf22d74d1ab270de3551f72a58399f5",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.5",
+                "guzzlehttp/promises": "^1.5.3 || ^2.0",
                 "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0",
@@ -331,7 +331,8 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.1",
                 "ext-curl": "*",
-                "php-http/client-integration-tests": "^3.0",
+                "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
+                "php-http/message-factory": "^1.1",
                 "phpunit/phpunit": "^8.5.29 || ^9.5.23",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
@@ -411,7 +412,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.5"
+                "source": "https://github.com/guzzle/guzzle/tree/7.7.0"
             },
             "funding": [
                 {
@@ -427,39 +428,38 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-18T08:37:42+00:00"
+            "time": "2023-05-21T14:04:53+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "dev-master",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "b94b2807d85443f9719887892882d0329d1e2598"
+                "reference": "4a94655427efd6906ed3eb628c79693291264713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/b94b2807d85443f9719887892882d0329d1e2598",
-                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/4a94655427efd6906ed3eb628c79693291264713",
+                "reference": "4a94655427efd6906ed3eb628c79693291264713",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^4.4 || ^5.1"
+                "bamarni/composer-bin-plugin": "^1.8.1",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
             "default-branch": true,
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\Promise\\": "src/"
                 }
@@ -496,7 +496,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.2"
+                "source": "https://github.com/guzzle/promises/tree/2.0"
             },
             "funding": [
                 {
@@ -512,7 +512,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-28T14:55:35+00:00"
+            "time": "2023-05-21T19:15:14+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -744,12 +744,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "6d70f402f0eddb2b154b22950b5381bbf5b28469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/6d70f402f0eddb2b154b22950b5381bbf5b28469",
+                "reference": "6d70f402f0eddb2b154b22950b5381bbf5b28469",
                 "shasum": ""
             },
             "require": {
@@ -778,7 +778,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -790,9 +790,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory/tree/master"
             },
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2023-05-17T18:32:11+00:00"
         },
         {
             "name": "psr/http-message",
@@ -894,26 +894,25 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "dev-main",
+            "version": "3.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e"
+                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
-                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/7c3aff79d10325257a001fcf92d991f24fc967cf",
+                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.3-dev"
+                    "dev-main": "3.4-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -942,7 +941,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.2.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/3.4"
             },
             "funding": [
                 {
@@ -958,7 +957,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-01T10:25:55+00:00"
+            "time": "2023-05-23T14:45:45+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -1163,16 +1162,16 @@
     "packages-dev": [
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.22",
+            "version": "2.1.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "c0fa388c56b64edfb92987fdcc37d7a0243170d7"
+                "reference": "73af53bd1b99d40f983ba57386ac6c374d9ef177"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/c0fa388c56b64edfb92987fdcc37d7a0243170d7",
-                "reference": "c0fa388c56b64edfb92987fdcc37d7a0243170d7",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/73af53bd1b99d40f983ba57386ac6c374d9ef177",
+                "reference": "73af53bd1b99d40f983ba57386ac6c374d9ef177",
                 "shasum": ""
             },
             "require": {
@@ -1249,13 +1248,13 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-18T17:29:27+00:00"
+            "time": "2023-05-22T19:44:57+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "flyo/nitrocms-yii2": 20
+        "flyo/nitro-yii2": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
