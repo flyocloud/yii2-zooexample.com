@@ -213,12 +213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/flyocloud/nitro-php-sdk.git",
-                "reference": "367dc410922cb0308cf851b679aa706777111c09"
+                "reference": "c8825b483e6e733c08ec2b71ef6c449be0c21e28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flyocloud/nitro-php-sdk/zipball/367dc410922cb0308cf851b679aa706777111c09",
-                "reference": "367dc410922cb0308cf851b679aa706777111c09",
+                "url": "https://api.github.com/repos/flyocloud/nitro-php-sdk/zipball/c8825b483e6e733c08ec2b71ef6c449be0c21e28",
+                "reference": "c8825b483e6e733c08ec2b71ef6c449be0c21e28",
                 "shasum": ""
             },
             "require": {
@@ -259,7 +259,7 @@
                 "issues": "https://github.com/flyocloud/nitro-php-sdk/issues",
                 "source": "https://github.com/flyocloud/nitro-php-sdk/tree/main"
             },
-            "time": "2023-05-26T14:23:27+00:00"
+            "time": "2023-05-30T10:59:57+00:00"
         },
         {
             "name": "flyo/nitro-yii2",
@@ -267,12 +267,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/flyocloud/nitro-yii2.git",
-                "reference": "5c9ebeec21c2ccd0e674fcb4578405cd5fb84104"
+                "reference": "84ebe297a59705507539e19cef0494180f4065c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flyocloud/nitro-yii2/zipball/5c9ebeec21c2ccd0e674fcb4578405cd5fb84104",
-                "reference": "5c9ebeec21c2ccd0e674fcb4578405cd5fb84104",
+                "url": "https://api.github.com/repos/flyocloud/nitro-yii2/zipball/84ebe297a59705507539e19cef0494180f4065c5",
+                "reference": "84ebe297a59705507539e19cef0494180f4065c5",
                 "shasum": ""
             },
             "require": {
@@ -301,7 +301,7 @@
                 "issues": "https://github.com/flyocloud/nitro-yii2/issues",
                 "source": "https://github.com/flyocloud/nitro-yii2/tree/main"
             },
-            "time": "2023-05-26T14:29:13+00:00"
+            "time": "2023-06-02T13:22:42+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -894,7 +894,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "3.4.x-dev",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -909,6 +909,7 @@
             "require": {
                 "php": ">=8.1"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -941,7 +942,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/3.4"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
             },
             "funding": [
                 {

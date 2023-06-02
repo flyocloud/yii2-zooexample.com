@@ -2,6 +2,7 @@
 
 /** @var yii\web\View $this */
 
+use Flyo\Yii\Widgets\ContainerWidget;
 use Flyo\Yii\Widgets\NavWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -30,7 +31,7 @@ EOT)
 <?php $this->beginBody() ?>
 
 <header id="header">
-    <?php $nav = NavWidget::begin(); ?>
+    <?php $nav = ContainerWidget::begin(['identifier' => 'nav']); ?>
         <ul>
         <?php foreach ($nav->getItems() as $item): ?>
             <li><?= Html::a($item->getLabel(), $item->getPath()); ?></li>
