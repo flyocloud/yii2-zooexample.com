@@ -1,8 +1,9 @@
 {
-    "minimum-stability": "dev",
     "require": {
-        "flyo/nitro-yii2" : "dev-main",
-        "yiisoft/yii2": "2.0.47"
+        "flyo/nitro-php" : "dev-main as 1.0.0",
+        "flyo/nitro-yii2" : "dev-main as 1.0.0",
+        "vlucas/phpdotenv": "^5.5",
+        "yiisoft/yii2": "^2.0.47"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "^2.1.0"

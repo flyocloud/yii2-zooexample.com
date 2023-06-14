@@ -11,14 +11,15 @@ use yii\web\View;
 /** @var string $content */
 /** @var View $this */
 
-$this->registerJs(<<<'EOT'
-const parentWindow = window.parent || window.opener;
-window.addEventListener("message", (event) => {
-    if (event.data?.action === 'pageRefresh') {
-        window.location.reload(true);
-    }
-})
-EOT)
+if (!YII_ENV_PROD) {
+    $this->registerJs(<<<'EOT'
+    window.addEventListener("message", (event) => {
+        if (event.data?.action === 'pageRefresh') {
+            window.location.reload(true);
+        }
+    })
+    EOT)
+}
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -49,7 +50,7 @@ EOT)
 <footer id="footer" class="mt-auto py-3 bg-light">
     <div class="container">
         <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; My Company <?= date('Y') ?> | <a href="/site/sitemap">Sitemap</a></div>
+            <div class="col-md-6 text-center text-md-start">&copy; My Company <?= date('Y') ?> | <a href="/sitemap">Sitemap</a> | <a href="/search">Search</a></div>
         </div>
     </div>
 </footer>

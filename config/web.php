@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'id' => 'basic-web',
+    'id' => 'flyo-nitro-example',
     'basePath' => dirname(__DIR__),
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -17,13 +17,17 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'enableStrictParsing' => false,
+            'enableStrictParsing' => true,
+            'rules' => [
+                'sitemap' => 'site/sitemap',
+                'search' => 'site/search',
+            ]
         ],
     ],
     'modules' => [
         'flyo' => [
             'class' => \Flyo\Yii\Module::class,
-            'token' => '__ADD_YOUR_TOKEN_HERE__',
+            'token' => YII_ENV_PROD ? '__PROD_TOKEN__' : '__DEV_TOKEN__',
         ],
         'debug' => [
             'class' => 'yii\debug\Module',
