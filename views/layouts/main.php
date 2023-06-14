@@ -18,7 +18,7 @@ if (!YII_ENV_PROD) {
             window.location.reload(true);
         }
     })
-    EOT)
+    EOT);
 }
 ?>
 <?php $this->beginPage() ?>
