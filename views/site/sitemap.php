@@ -1,6 +1,7 @@
 <?php
 
 use Flyo\Model\EntityinterfaceInner;
+
 ?>
 <div class="container mx-auto mt-10">
     <?php foreach ($response as $item): /** @var EntityinterfaceInner $item */ ?>

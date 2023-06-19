@@ -1,2 +1,5 @@
 /vendor
 /runtime
+.env
+.php-cs-fixer.cache
+.tmp

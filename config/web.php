@@ -21,13 +21,13 @@ return [
             'rules' => [
                 'sitemap' => 'site/sitemap',
                 'search' => 'site/search',
-            ]
+            ],
         ],
     ],
     'modules' => [
         'flyo' => [
             'class' => \Flyo\Yii\Module::class,
-            'token' => YII_ENV_PROD ? '__PROD_TOKEN__' : '__DEV_TOKEN__',
+            'token' => YII_ENV_PROD ? '__PROD_TOKEN__' : '__DEV_TOKEN__', // @phpstan-ignore-line
         ],
         'debug' => [
             'class' => 'yii\debug\Module',
