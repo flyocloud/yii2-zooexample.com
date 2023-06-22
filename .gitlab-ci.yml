@@ -1,0 +1,56 @@
+stages:
+  - deps
+  - test
+  - deploy
+
+deps:
+  stage: deps
+  image: composer
+  script:
+    - composer install --no-dev --no-progress --prefer-dist --optimize-autoloader
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - "vendor"
+
+depsdev:
+  stage: deps
+  image: composer
+  script:
+    - composer install --dev --no-progress --prefer-dist --optimize-autoloader
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - "vendor"
+
+test:
+  stage: test
+  image: php:8.1-cli
+  before_script:
+    - echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+  script:
+    - ./vendor/bin/phpstan analyse --no-progress --error-format gitlab > phpstan.json  
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - "phpstan.json"
+    when: always
+    reports:
+      codequality: phpstan.json
+  rules:
+    - exists:
+        - phpstan.neon
+  dependencies:
+    - depsdev
+
+
+deploy:
+  stage: deploy
+  image: node:alpine
+  script:
+    - npm install # install form package-lock.json
+    - npm install -g serverless # global install serverless (this allows usage of env variables)
+    - npm run build # compile the css
+    - serverless deploy --stage dev
+  dependencies:
+    - deps

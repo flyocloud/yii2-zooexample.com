@@ -1,0 +1,42 @@
+service: <PROJECTNAME>
+
+params:
+  prod:
+    env: prod
+    debug: 0
+  dev:
+    env: test
+    debug: 1
+
+provider:
+  name: aws
+  region: eu-central-1
+  stage: dev
+  environment:
+    YII_ENV: ${param:env}
+    YII_DEBUG: ${param:debug}
+
+plugins:
+  - ./vendor/bref/bref
+  - serverless-lift
+functions:
+    website:
+        handler: web/index.php
+        description: ''
+        runtime: php-81-fpm
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        events:
+            -   httpApi: '*'
+
+constructs:
+  website:
+    type: server-side-website
+    assets:
+      '/resources/*': web/resources
+      '/static/*': web/static
+
+# Exclude files from deployment
+package:
+    patterns:
+        - '!node_modules/**'
+        - '!tests/**'

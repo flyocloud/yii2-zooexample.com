@@ -3,3 +3,4 @@
 .env
 .php-cs-fixer.cache
 .tmp
+/node_modules

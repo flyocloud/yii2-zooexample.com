@@ -5,6 +5,7 @@
 use Flyo\Yii\Widgets\ContainerWidget;
 use yii\helpers\Html;
 use yii\web\View;
+use Idleberg\ViteManifest\Manifest;
 
 /** @var string $content */
 /** @var View $this */
@@ -16,20 +17,40 @@ if (!YII_ENV_PROD) {
                 window.location.reload(true);
             }
         })
-        EOT, View::POS_HEAD);
+    EOT, View::POS_HEAD);
 }
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language; ?>" class="h-100">
+<html lang="de">
 <head>
     <title><?= Html::encode($this->title); ?></title>
+    <?php if (YII_ENV_DEV): ?>
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/main.js"></script>
+    <?php else: 
+        $vm = new Manifest(Yii::getAlias('@webroot/resources/dist/manifest.json'), Yii::getAlias('@web/resources/dist/'));
+        $entrypoint = $vm->getEntrypoint("main.js", false);
+        if ($entrypoint) {
+            ["url" => $url, "hash" => $hash] = $entrypoint;
+            echo "<script type='module' src='$url' crossorigin integrity='$hash'></script>" . PHP_EOL;
+        }
+        foreach ($vm->getImports("main.js", false) as $import) {
+            ["url" => $url] = $import;
+            echo "<link rel='modulepreload' href='$url' />" . PHP_EOL;
+        }
+        foreach ($vm->getStyles("main.js", false) as $style) {
+            ["url" => $url, "hash" => $hash] = $style;
+            echo "<link rel='stylesheet' href='$url' crossorigin integrity='$hash' />" . PHP_EOL;
+        }
+    endif;
+    ?>
     <?php $this->head(); ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 <?php $this->beginBody(); ?>
 
-<header id="header">
+<header class="bg-gray-200 p-5">
     <?php $nav = ContainerWidget::begin(['identifier' => 'nav']); ?>
         <ul>
             <?php foreach ($nav->getItems() as $item): ?>
@@ -39,17 +60,15 @@ if (!YII_ENV_PROD) {
     <?php $nav::end(); ?>
 </header>
 
-<main id="main" class="flex-shrink-0" role="main">
-    <div class="container">
+<main role="main">
+    <div class="container mx-auto p-5 my-5">
         <?= $content; ?>
     </div>
 </main>
 
-<footer id="footer" class="mt-auto py-3 bg-light">
+<footer class="border bg-gray-200 p-5">
     <div class="container">
-        <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; My Company <?= date('Y'); ?> | <a href="/sitemap">Sitemap</a> | <a href="/search">Search</a></div>
-        </div>
+        <div>&copy; My Company <?= date('Y'); ?> | <a href="/sitemap">Sitemap</a> | <a href="/search">Search</a></div>
     </div>
 </footer>
 
