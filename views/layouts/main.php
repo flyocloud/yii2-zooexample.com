@@ -16,7 +16,7 @@ if (!YII_ENV_PROD) {
                 window.location.reload(true);
             }
         })
-        EOT);
+        EOT, View::POS_HEAD);
 }
 ?>
 <?php $this->beginPage(); ?>
