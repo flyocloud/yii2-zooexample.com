@@ -54,7 +54,7 @@ if (!YII_ENV_PROD) {
     <?php $nav = ContainerWidget::begin(['identifier' => 'nav']); ?>
         <ul>
             <?php foreach ($nav->getItems() as $item): ?>
-                <li><?= Html::a($item->getLabel(), $item->getPath()); ?></li>
+                <li><?= Html::a($item->getLabel(), $item->getHref()); ?></li>
             <?php endforeach; ?>
         </ul>
     <?php $nav::end(); ?>
