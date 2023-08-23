@@ -44,7 +44,7 @@ test:
     - depsdev
 
 
-deploy:
+deploy:ci:
   stage: deploy
   image: node:alpine
   script:
@@ -54,3 +54,20 @@ deploy:
     - serverless deploy --stage dev
   dependencies:
     - deps
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == "master"
+
+deploy:prod:
+  stage: deploy
+  image: node:alpine
+  script:
+    - npm install # install form package-lock.json
+    - npm install -g serverless # global install serverless (this allows usage of env variables)
+    - npm run build # compile the css
+    - serverless deploy --stage prod
+  dependencies:
+    - deps
+  only:
+    refs:
+      - tags
