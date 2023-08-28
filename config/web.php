@@ -3,6 +3,8 @@
 return [
     'id' => 'flyo-nitro-example',
     'basePath' => dirname(__DIR__),
+    'language' => 'de-CH',
+    'timeZone' => 'Europe/Zurich',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
