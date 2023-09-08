@@ -53,7 +53,7 @@ deploy:ci:
     - npm run build # compile the css
     - serverless deploy --stage dev
   dependencies:
-    - deps
+    - depsdev
   only:
     variables:
       - $CI_COMMIT_BRANCH == "master"
