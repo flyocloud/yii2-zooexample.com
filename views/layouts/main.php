@@ -2,6 +2,7 @@
 
 /** @var yii\web\View $this */
 
+use Flyo\Yii\Module;
 use Flyo\Yii\Widgets\ContainerWidget;
 use yii\helpers\Html;
 use yii\web\View;
@@ -73,6 +74,7 @@ if (!YII_ENV_PROD) {
 </footer>
 
 <?php $this->endBody(); ?>
+<!-- debug: <?= var_export(YII_DEBUG); ?> | env: <?= YII_ENV; ?> | release: <?= Yii::$app->version; ?> | version: <?= YII_ENV_PROD ? Module::getVersionApi()->getVersion() : 0; ?> -->
 </body>
 </html>
 <?php $this->endPage(); ?>

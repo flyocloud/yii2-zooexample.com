@@ -1,8 +1,10 @@
 <?php
 
-return [
+$version = $_ENV['VERSION'] ?? YII_ENV;
+$config = [
     'id' => 'flyo-nitro-example',
     'basePath' => dirname(__DIR__),
+    'version' => $version,
     'language' => 'de-CH',
     'timeZone' => 'Europe/Zurich',
     'aliases' => [
@@ -33,12 +35,16 @@ return [
             'class' => \Flyo\Yii\Module::class,
             'token' => YII_ENV_PROD ? '__PROD_TOKEN__' : '__DEV_TOKEN__', // @phpstan-ignore-line
         ],
-        /*
-        'debug' => [
-            'class' => 'yii\debug\Module',
-            'allowedIPs' => ['*'],
-        ],
-        */
     ],
-    'bootstrap' => [/*'debug', */'flyo'],
+    'bootstrap' => ['flyo'],
 ];
+
+if (YII_DEBUG) {
+    $config['modules']['debug'] = [
+        'class' => 'yii\debug\Module',
+        'allowedIPs' => ['*'],
+    ];
+    $config['bootstrap'][] = 'debug';
+}
+
+return $config;
