@@ -46,7 +46,7 @@ test:
 
 deploy:ci:
   stage: deploy
-  image: node:alpine
+  image: node:20-alpine
   script:
     - npm install # install form package-lock.json
     - npm install -g serverless # global install serverless (this allows usage of env variables)
@@ -60,7 +60,7 @@ deploy:ci:
 
 deploy:prod:
   stage: deploy
-  image: node:alpine
+  image: node:20-alpine
   script:
     - npm install # install form package-lock.json
     - npm install -g serverless # global install serverless (this allows usage of env variables)
